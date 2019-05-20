@@ -32,7 +32,9 @@ Gravity Forms + Custom Post Types
 
 = v1.1
 	- Enqueue assets
-
+	- Update form settings
+		- Delete form entries automatically after 10 days ("Course Syllabi" posts created by the form are not affected)
+		- Enable form admin notification with link to edit/approve the Custom Post Type entry
 
 = v1.0 (2019-05-16) =
 * [NEW] Initial release
