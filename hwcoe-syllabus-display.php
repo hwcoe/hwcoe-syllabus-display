@@ -173,21 +173,3 @@ function syllabi_table_shortcode() {
 }
 
 add_shortcode('syllabi-table', 'syllabi_table_shortcode'); 
-
-add_filter( 'gform_confirmation', 'custom_confirmation', 10, 4 );
-
-function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
-	 if( $form['title'] == 'Syllabi Uploads' ) {
-	 	$confirmation .= "<h2>Submit another syllabus</h2>";
-	 	$confirmation .= "[gravityform id=\"" . $form['id'] . "\" title=\"true\" description=\"false\" ajax=\"true=''\"]";
-	 	$confirmation .= "
-	 	<script>
-	 	jQuery( document ).ready(function() {
-	 		jQuery(document).on('gform_confirmation_loaded', function () {
-	 			console.log('confirmation loaded');
-	 		});
-	 	});
-	 	</script>";
-	 }
-	 return $confirmation;
-}
