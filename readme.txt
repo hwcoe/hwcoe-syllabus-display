@@ -1,17 +1,17 @@
 === HWCOE Syllabus Upload ===
-Contributors: Allison Logan
+Contributors: Allison Logan, Sarah Zachrich Jeng
 
 Allows admin to display a dynamic table of entries using the Syllabus Upload custom_post_type.
 
 == Description ==
 
-The HWCOE Syllabus Upload plugin has been created specifically for HWCOE child theme websites. This plugin allows admin to display a dynamic table of entries using the Syllabus Upload custom_post_type, Gravity Forms  using the Syllabi Uploads form, the Gravity Forms + Custom Post Types plugin and Advanced Custom Fields (ACF) using the Syllabus Upload Modules field group. 
+The HWCOE Syllabus Upload plugin has been created specifically for HWCOE websites. This plugin allows admin to display a dynamic table of entries using the Syllabus Upload custom post type, Gravity Forms using the Syllabi Uploads form, the Gravity Forms + Custom Post Types plugin and Advanced Custom Fields (ACF) using the Syllabus Upload Modules field group. 
 
-The specified custom_post_type, Gravity Form and ACF Field Group must be used for this plugin to work. 
+The specified custom post type, Gravity Form and ACF Field Group must be used for this plugin to work. 
 
 == Required Plugins ==
 
-Advanced Custom Fields
+Advanced Custom Fields PRO
 Gravity Forms
 Gravity Forms + Custom Post Types
 
@@ -25,6 +25,7 @@ Gravity Forms + Custom Post Types
 6. Import the "gravityforms-syllabi-upload.json" file located in the "_Required Files" folder.
 7. Set up the reCAPTCHA for your form:
      - Go to the reCAPTCHA link (https://www.google.com/recaptcha/admin/create) to register your site. You may need to create a gmail account for this. Use something generic that can stay with the department and not something personal.
+     - If you expect fewer than 10,000 requests, you can use a Legacy reCAPTCHA key without inputting a credit card.
      - Select reCAPTCHA v2 and the first "I'm not a robot" option
      - Add your website address under domain
      - Accept the terms and submit. This should provide you with two keys you will need for the form.	
@@ -33,14 +34,18 @@ Gravity Forms + Custom Post Types
      - Go to Forms > Syllabi Uploads > Settings > Notifications
      - Turn on the Admin Notification and click to edit
      - Add in whatever email you would like to receive notifications of syllabi submissions in the "Send To Email" field
-9. Paste the form shortcode on a page on your website to display the form.
+9. Paste the form shortcode on a page on your website to display the form. To limit form submissions to users with Gatorlink login, enable the "Limit content to Shibboleth or WordPress users" check box under Page Options and select "Gatorlink Users" or "WordPress Users."
 10. Paste the plugin shortcode -- [syllabi-table] -- on the page you would like to display the table. 
      ***Page must have "Syllabi Upload" as the title.***
 11. As syllabi entries are submitted, they will be pending approval in the Course Syllabi tab and will display in the table once you have published the entry.
 
 
-
 == Changelog ==
+
+= v1.7 (2024-07-23) =
+   * Updates year form field
+   * Adds refresh/submit another syllabus button to confirmation
+   * Updates instructions
 
 = v1.6 (2022-01-03) =
    * Adds column for revisions
