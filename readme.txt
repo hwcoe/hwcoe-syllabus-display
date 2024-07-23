@@ -46,6 +46,7 @@ Gravity Forms + Custom Post Types
    * Updates year form field
    * Adds refresh/submit another syllabus button to confirmation
    * Updates instructions
+   * Fixes PHP warnings
 
 = v1.6 (2022-01-03) =
    * Adds column for revisions

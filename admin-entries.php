@@ -204,7 +204,7 @@ function hwcoe_syllabi_search_where( $where ) {
 function hwcoe_syllabi_search_distinct( $where ){
     global $pagenow, $wpdb;
 
-    if ( is_admin() && $pagenow=='edit.php' && $_GET['post_type']=='hwcoe-syllabi' && $_GET['s'] != '') {
+    if ( is_admin() && 'edit.php' === $pagenow && 'hwcoe-syllabi' === $_GET['post_type'] && ! empty( $_GET['s'] ) ) {
     return "DISTINCT";
 
     }

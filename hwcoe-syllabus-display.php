@@ -47,7 +47,7 @@ $theformID = RGFormsModel::get_form_id('Syllabi Upload');
 add_action('gform_pre_submission', 'titlecase_fields');
 function titlecase_fields($form){
 	// add all the field IDs you want to titlecase, to this array
-	$form  = GFAPI::get_form( $theformID );
+	$form  = GFAPI::get_form( $GLOBALS['theformID'] );
 	$fields_to_titlecase = array(
 						'input_8_3',
 						'input_8_6');
@@ -64,7 +64,7 @@ function titlecase_fields($form){
 add_action('gform_pre_submission', 'upperecase_fields');
 function upperecase_fields($form){
 	// add all the field IDs you want to uppercase, to this array
-	$form  = GFAPI::get_form( $theformID );
+	$form  = GFAPI::get_form( $GLOBALS['theformID'] );
 	$fields_to_uppercase = array(
 						'input_14');
 	foreach ($fields_to_uppercase as $each) {
