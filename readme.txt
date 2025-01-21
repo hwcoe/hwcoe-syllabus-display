@@ -42,6 +42,9 @@ Gravity Forms + Custom Post Types
 
 == Changelog ==
 
+= v1.8.0 (2025-01-21) =
+   * Updates year form field
+
 = v1.7 (2024-07-23) =
    * Updates year form field
    * Adds refresh/submit another syllabus button to confirmation
