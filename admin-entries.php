@@ -39,8 +39,8 @@ function manage_syllabi_columns( $column, $post_id ) {
 			/* Get the post meta. */
 			$instructor = get_post_meta( $post_id, 'su_instructor', true );
 
-			/* Display the post meta. */
-			printf( $instructor );
+			/* Display the post meta. */ 
+			printf( esc_html($instructor) );
 
 			break;
 
@@ -51,7 +51,7 @@ function manage_syllabi_columns( $column, $post_id ) {
 			$number = get_post_meta( $post_id, 'su_course_number', true );
 
 			/* Display the post meta. */
-			printf( $number );
+			printf( esc_html($number) );
 
 			break;			
 
@@ -62,7 +62,7 @@ function manage_syllabi_columns( $column, $post_id ) {
 			$semester = get_post_meta( $post_id, 'su_semester', true );
 
 			/* Display the post meta. */
-			printf( $semester );
+			printf( esc_html($semester) );
 
 			break;	
 			
@@ -73,7 +73,7 @@ function manage_syllabi_columns( $column, $post_id ) {
 			$year = get_post_meta( $post_id, 'su_year', true );
 
 			/* Display the post meta. */
-			printf( $year );
+			printf( esc_html($year) );
 
 			break;
 			
@@ -84,7 +84,7 @@ function manage_syllabi_columns( $column, $post_id ) {
 			$syllabi = get_post_meta( $post_id, 'su_syllabi_upload', true );
 
 			/* Display the post meta. */
-			printf( '<a href="' . $syllabi . '">Syllabus</a>');
+			printf( '<a href="' . esc_url($syllabi) . '">Syllabus</a>');
 
 			break;			
 

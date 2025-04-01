@@ -3,7 +3,7 @@
 Plugin Name: HWCOE Syllabi Display
 Description: This plugin allows admin to display a dynamic table of entries using the Syllabus Upload custom_post_type. Use this shortcode to display the table: <strong>[syllabi-table]</strong>.
 Requirements: Advanced Custom Fields with the Student Registration Modules field group; hwcoe-ufl-child theme with career fair modifications; Gravity Forms with the Syllabi Uploads form and Gravity Forms + Custom Post Types plugin. 
-Version: 1.8.1
+Version: 1.8.2
 Author: Allison Logan
 Author URI: http://allisoncandreva.com/
 */
@@ -378,17 +378,24 @@ function syllabi_table_shortcode() {
 				<tbody>';
 	
 	while ( $the_query->have_posts() ) : $the_query->the_post();
+		$upload = get_field( 'su_syllabi_upload' );
+		$coursenumber = get_field( 'su_course_number' );
+		$coursesections = get_field( 'su_course_sections' );
+		$instructor = get_field( 'su_instructor' );
+		$semester = get_field( 'su_semester' );
+		$year = get_field( 'su_year' );
+		
 			$output .= '<tr>
-							<td><a href="' .get_field( 'su_syllabi_upload' ). '" target="_blank">' .get_field( 'su_course_title' ). '</a></td>
-							<td>' .get_field( 'su_course_number' ). '</td>';
-				if(get_field( 'su_course_sections' )):  //if the field is not empty
-					$output .= '<td>' .get_field( 'su_course_sections' ). '</td>'; //display it
+							<td><a href="' . esc_url($upload) . '" target="_blank">' .get_field( 'su_course_title' ). '</a></td>
+							<td>' . esc_html($coursenumber) . '</td>';
+				if ( $coursesections ):  //if the field is not empty
+					$output .= '<td>' . esc_html($coursesections) . '</td>'; //display it
 					else: 
 					$output .= '<td>All Sections</td>';
 					endif; 		
-				$output .= '<td>' .get_field( 'su_instructor' ). '</td>
-							<td>' .get_field( 'su_semester' ). '</td>
-							<td>' .get_field( 'su_year' ). '</td>';
+				$output .= '<td>' . esc_html($instructor) . '</td>
+							<td>' . esc_html($semester) . '</td>
+							<td>' . esc_html($year) . '</td>';
 			$output .= '</tr>';
 	endwhile;
 	wp_reset_query();
