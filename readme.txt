@@ -42,6 +42,10 @@ Gravity Forms + Custom Post Types
 
 == Changelog ==
 
+= v1.8.1 (2025-04-01) =
+   * Accommodate separators in titlecasing name fields
+   * Update year form field
+
 = v1.8.0 (2025-01-21) =
    * Updates year form field
 

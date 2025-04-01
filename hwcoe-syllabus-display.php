@@ -3,7 +3,7 @@
 Plugin Name: HWCOE Syllabi Display
 Description: This plugin allows admin to display a dynamic table of entries using the Syllabus Upload custom_post_type. Use this shortcode to display the table: <strong>[syllabi-table]</strong>.
 Requirements: Advanced Custom Fields with the Student Registration Modules field group; hwcoe-ufl-child theme with career fair modifications; Gravity Forms with the Syllabi Uploads form and Gravity Forms + Custom Post Types plugin. 
-Version: 1.8.0
+Version: 1.8.1
 Author: Allison Logan
 Author URI: http://allisoncandreva.com/
 */
@@ -55,7 +55,7 @@ function titlecase_fields($form){
 			// for each field, convert the submitted value to lowercase and then title case and assign back to the POST variable
 			// the rgpost function strips slashes
 			$lowercase = strtolower(rgpost($each));
-			$_POST[$each] = ucwords($lowercase);
+			$_POST[$each] = ucwords($lowercase, " \t\r\n\f\v'.-");
 		} 
 	// return the form, even though we did not modify it
 	return $form;
