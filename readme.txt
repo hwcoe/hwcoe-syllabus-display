@@ -42,6 +42,10 @@ Gravity Forms + Custom Post Types
 
 == Changelog ==
 
+= v1.8.3 (2025-08-20) =
+   * Include placeholder for department name in syllabi upload form title
+   * Allow optional trailing letter in course number field input mask to accommodate lab course numbers
+
 = v1.8.2 (2025-04-01) =
    * Escaping fields 
 
