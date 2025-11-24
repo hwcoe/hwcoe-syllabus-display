@@ -76,7 +76,7 @@ function upperecase_fields($form){
 	return $form;
 }//end field uppercasing
 
-require_once plugin_dir_path( __FILE__ ) . 'inc/gw-gravity-forms-rename-uploaded-files.php';
+// require_once plugin_dir_path( __FILE__ ) . 'inc/gw-gravity-forms-rename-uploaded-files.php';
 
 
 /*Plugin shortcode*/
